@@ -10,11 +10,10 @@ class App {
     this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
 
     this.balls = [];
-    this.palette = new Palette("30px");
+    this.palette = new Palette();
     this.palette.draw();
 
-    window.addEventListener("click", (e) => {
-      console.log(e.offsetX);
+    document.addEventListener("click", (e) => {
       this.balls.push(
         new Ball(
           e.offsetX,
