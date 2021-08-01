@@ -14,10 +14,11 @@ class App {
     this.palette.draw();
 
     document.addEventListener("click", (e) => {
+      console.log(e);
       this.balls.push(
         new Ball(
-          e.offsetX,
-          e.offsetY,
+          e.clientX,
+          e.clientY,
           Math.random() * 100 + 20,
           this.palette.curColorArray[
             Math.floor(Math.random() * this.palette.curColorArray.length)
